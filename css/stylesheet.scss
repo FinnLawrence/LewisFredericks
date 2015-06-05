@@ -241,6 +241,19 @@ h4 {
     text-align: left;
 }
 
+#modal-enquiry-form-container {
+    
+}
+
+#modal-enquiry-form {
+
+
+    h4 {
+        text-align: left;
+    }
+
+}
+
 .dimensions, .hardware {
     border-left: 1px solid $dark-grey;
 }
@@ -265,6 +278,16 @@ h4 {
 
 .close span {
     color: $dark-grey;
+}
+
+.price {
+    margin: 0px;
+}
+
+.price-subscript {
+    display: inline-block;
+    font-size: 1em;
+    font-size: 1rem;
 }
 
 .buying-options {
@@ -351,13 +374,13 @@ label.error {
 }
 
 @media (max-width: 406px) {
-    
+
     #modal-enquiry-form button {
         margin-top: 15px;
         margin-right: 15px;
         margin-left: 15px;
     }
-    
+
     #modal-enquiry-form span {
         float: right;
     }
