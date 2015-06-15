@@ -3,12 +3,145 @@ layout: homepage
 title: "Lewis Fredericks - Handcrafted Horn Eyewear"
 description: ""
 ---
+<!-- HOMEPAGE CAROUSEL -->
+<div id="home" class="nav-padding off-white"></div>
+<div class="homepage-carousel off-white">
+    <div class="flexslider flexslider-desktop">
+        <ul class="slides">
+            <li>
+                <div class="row homepage-slide">
+                    <div class="col-xs-12">
+                        <img src="/img/carousel-steps-1.png" alt="Handcrafted Horn Eyewear"/>
+                        <h1>Handcrafted Horn Eyewear</h1>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-2.png" alt="Sorting through Domestic Issue"/>
+                    </div>
+                    <div class="col-xs-6 blurb">
+                        <h3>01. Sorting through Domestic Issue</h3>
+                        <p>Lewis Fredericks is proud to only use horn that is a byproduct of animal domestication. It is both a renewable and a sustainable practice.</p>
+                        <p>It is essential the horn is of the utmost quality in order to create frames of distinction; our selection process is testament to this.</p>
+                        <p>We immediately discard around a fifth of the horn we receive due to imperfections and sizing issues.</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-3.png" alt="Horn to Horn Plate"/>
+                    </div>
+                    <div class="col-xs-6 blurb">
+                        <h3>02. Horn to Horn Plate</h3>
+                        <p>We keep the horns that are still in full form, unmarred and have a good oval structure with a broad base. The unwanted horns are sent back to their respective farms, ground up and used as fertiliser</p>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="/img/carousel-steps-4.png" alt="Horn to Horn Plate"/>
+                            </div>
+                            <div class="col-xs-6">
+                                <img src="/img/carousel-steps-5.png" alt="Horn to Horn Plate"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>03. Sketch design onto horn plate &amp; cut out</h3>
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-6.png" alt="Horn to Horn Plate"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-7.png" alt="Horn to Horn Plate"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>04. Buffing and edging frame</h3>
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-8.png" alt="Buffing and edging frame"/>
+                    </div>
+                    <div class="col-xs-6">
+                        <img src="/img/carousel-steps-9.png" alt="Buffing and edging frame"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>05. Bridge and nose</h3>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-10.png" alt="Bridge and nose"/>
+                    </div>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-11.png" alt="Bridge and nose"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>06. Cutting and buffing legs and adding hinge</h3>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-12.png" alt="Bridge and nose"/>
+                    </div>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-13.png" alt="Bridge and nose"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>07. Fitting and buffing temples</h3>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-14.png" alt="Bridge and nose"/>
+                    </div>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-15.png" alt="Bridge and nose"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>08. Polishing and Wood Chips</h3>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-16.png" alt="Bridge and nose"/>
+                    </div>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-17.png" alt="Bridge and nose"/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="row homepage-slide">
+                        <h3>09. Fit lenses and engraving</h3>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-18.png" alt="Bridge and nose"/>
+                    </div>
+                    <div class="col-xs-6 padded">
+                        <img src="/img/carousel-steps-19.png" alt="Bridge and nose"/>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="homepage-buttons">
+        <div class="button-wrapper">
+            <a class="btn btn-default">SEE THE PROCESS</a>
+            <a href="#{{ site.frames[0].title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="btn btn-primary">VIEW THE FRAMES</a>
+        </div>
+    </div>
+</div>
+
 <!-- FRAMES PODIUMS -->
 <div>
     {% assign isFirst = true %} 
     {% for frame in site.frames %}
     {% if isFirst %}
     {% assign isFirst = false %}
+    <div class="section-separator off-white"><div class="section-border"></div></div>
     {% else %}
     <div class="section-separator off-white"><div class="section-border"></div></div>
     {% endif %}
@@ -40,9 +173,17 @@ description: ""
 </div>
 <!--/FRAMES PODIUMS -->
 
+<!-- LOOKBOOK -->
+<div id="lookbook" class="nav-padding"></div>
+
+<!-- HORN -->
+<div id="horn" class="nav-padding"></div>
+
 <!-- STOCKISTS -->
-<div class="container-fluid"
-     <!--/STOCKISTS -->
+<div id="stockists" class="nav-padding"></div>
+
+<!-- CONTACT -->
+<div id="contact" class="nav-padding"></div>
 
 <!-- DETAILS MODAL -->
 <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="modal-frame-title" aria-hidden="true">
@@ -95,13 +236,13 @@ description: ""
                                 <h2>PURCHASE</h2>
                                 <h4 class="price">Online Price: $420</h4><p class="price-subscript">New Zealand Dollars incl. GST</p>
                                 <p>Lewis Fredericks frames are made from real horn, not a manufactured imitation. Each individual pair of Lewis Fredericks is a completely unique, one of a kind piece.</p>
-                                <p>Every Lewis Fredericks frame has a unique appearance, with naturally-occurring variations in color, striations and horn pattern. For this reason we do not operate a traditional online store.</p>
-                                <p>We encourage you to visit our stockists to choose a frame, or alternatively, to get in touch by leaving your email address. We will contact you with what is currently in stock, and assist you in finding a frame that fits your taste.</p>
+                                <p>Every frame has a unique appearance, with naturally-occurring variations in color, striations and horn pattern. For this reason we do not operate a traditional online store.</p>
+                                <p>We encourage you to visit our stockists to choose a frame, or alternatively, to get in touch by leaving your email address. We will contact you with the range that is currently in stock, and assist you in choosing a frame that fits your taste.</p>
                             </div>
                             <div class="col-md-6 col-xs-12 pull-down">
                                 <div class="view-stockists">
                                     <h4>VISIT A STOCKIST</h4>
-                                    <button type="submit" class="btn btn-primary">View Stockists</button>
+                                    <button type="button" class="btn btn-primary btn-stockists">View Stockists</button>
                                 </div>
                                 <form id="modal-enquiry-form" class="form-inline" method="post" action="#">
                                     <h4>ENQUIRE ONLINE</h4>

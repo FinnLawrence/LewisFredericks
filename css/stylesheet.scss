@@ -73,6 +73,14 @@ h4 {
     z-index: 1200;
 }
 
+#ie8 {
+    display: none;
+}
+
+.js #javascript-disabled {
+    display: none !important;    
+}
+
 // BUTTONS
 
 .btn-primary {
@@ -103,8 +111,8 @@ h4 {
     border-radius: 0px;
 }
 
-.btn:focus {
-    outline: none;
+.btn:focus, .btn:active {
+    outline: none !important;
 }
 
 // NAVIGATION
@@ -163,6 +171,80 @@ h4 {
     .navbar-right .dropdown-menu li a{
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+}
+
+// HOMEPAGE CAROUSEL
+
+.homepage-carousel {
+    overflow-x: hidden;
+}
+
+.flexslider{
+    .flex-direction-nav a {
+        height: 50px;
+        margin: -25px 0 0 ;
+    }
+}
+
+.flexslider-desktop {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.homepage-slide {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+
+    h1 {
+        margin-top: 0px;
+    }
+    
+    > h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+        }
+
+    .blurb {
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left;
+        }
+        
+        p {
+            text-align: justify;
+        }
+    }
+    
+    .col-xs-6.padded {
+        padding-top: 15px;
+    }
+}
+
+.homepage-buttons {
+    text-align: center;
+    position: relative;
+    top: -100px;
+
+    .button-wrapper {
+        display: inline-block;
+    }
+    
+    .btn-default {
+        font-weight: bold;
+    }
+    
+    .btn-default:active, .btn-default:focus, .btn-default:hover {
+        font-weight: normal;
+    }
+    
+    .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+        font-weight: bold;
     }
 }
 
@@ -242,7 +324,7 @@ h4 {
 }
 
 #modal-enquiry-form-container {
-    
+
 }
 
 #modal-enquiry-form {

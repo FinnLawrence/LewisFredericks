@@ -2,6 +2,29 @@ $(document).ready(function() {
     // Color nav
     colorNavigation();
 
+    $('.flexslider').flexslider();
+
+    // SMOOTH SCROLL
+
+    $('a[href^=#]').click(function(){
+        if ($.attr(this, 'href') === "#") {
+            return false;
+        } else {
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 600);
+            return false;
+        }
+    });
+
+    $('.btn-stockists').click(function(){
+        $('#details-modal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $('#stockists').offset().top
+        }, 600);
+        return false;
+    });
+
     // DETAILS MODAL
     $('#details-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal
