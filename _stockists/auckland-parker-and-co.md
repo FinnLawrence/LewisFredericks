@@ -1,9 +1,9 @@
 ---
-title: Auckland Parker and Co
-web-address: "http://www.thisisfabric.com"
-phone: +64 9 366 4528
-address: 5 High St
-suburb: Downtown
+title: "Parker & Co"
+web-address: "http://www.parkerandco.nz"
+phone: +64 9 524 8828
+address: 26 Nuffield St
+suburb: Newmarket
 city: Auckland
 state: ""
 country: New Zealand
