@@ -1,10 +1,10 @@
 ---
-title: Sydney Eyecee
-web-address: "http://www.thisisfabric.com"
-phone: +64 9 366 4528
-address: 5 High St
-suburb: Downtown
-city: Auckland
-state: ""
-country: New Zealand
+title: Eyecee
+web-address: "http://www.eyecee.com.au"
+phone: +61 2 9550 6711
+address: 167 King St
+suburb: ""
+city: Sydney
+state: New South Wales
+country: Australia
 ---
