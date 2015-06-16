@@ -1,10 +1,10 @@
 ---
-title: Wellington Scotties
-web-address: "http://www.occhiali.co.nz"
-phone: +64 9 376 3073
-address: 303 Ponsonby Road
-suburb: Ponsonby
-city: Auckland
-state: null
+title: Scotties
+web-address: "http://www.scottiesboutique.co.nz"
+phone: +64 9 384 3805
+address: 4 Blair St
+suburb: Te Aro
+city: Wellington
+state: ""
 country: New Zealand
 ---
