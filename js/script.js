@@ -5,7 +5,6 @@ $(document).ready(function() {
     $('.flexslider').flexslider();
 
     // SMOOTH SCROLL
-
     $('a[href^=#]').click(function(){
         if ($.attr(this, 'href') === "#") {
             return false;
@@ -17,6 +16,18 @@ $(document).ready(function() {
         }
     });
 
+    // STOCKIST FILTERS
+    $('.btn-stockist-filter').click(function () {
+        var filterString = $(this).attr('id');
+        if (filterString === "all") {
+            filterString = "*"
+        } else {
+            filterString = "." + filterString;
+        }
+        $('.stockist-grid').isotope({filter: filterString});
+    });
+
+    // MODAL STOCKIST BUTTON
     $('.btn-stockists').click(function(){
         $('#details-modal').modal('hide');
         $('html, body').animate({
@@ -24,7 +35,7 @@ $(document).ready(function() {
         }, 600);
         return false;
     });
-
+    
     // DETAILS MODAL
     $('#details-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal
@@ -50,14 +61,42 @@ $(document).ready(function() {
     });
 });
 
+// Window Load
+$(window).load(function() {
+    centerSectionHeaders();
+
+    var $grid = $('.stockist-grid').isotope({
+        // options
+        itemSelector: '.stockist',
+        layoutMode: 'masonry'
+    });
+});
+
 // Scrolling
 $(window).scroll(function() {
     colorNavigation();
 
 });
 
+// CENTER SECTION HEADERS
+function centerSectionHeaders() {
+    $('.section-border > h1').each(function () {
+        var leftMargin = $(this).innerWidth() / 2;
+        $(this).css("margin-left", -leftMargin + "px");
+    });
+}
 
+// Calculate width of text from DOM element or string. By Phil Freo <http://philfreo.com>
+$.fn.textWidth = function(){
+    var html_org = $(this).html();
+    var html_calc = '<span>' + html_org + '</span>';
+    $(this).html(html_calc);
+    var width = $(this).find('span:first').width();
+    $(this).html(html_org);
+    return width;
+};
 
+// COLOR NAVIGATION
 function colorNavigation() {
     var windowTop = $(window).scrollTop() + $('#main-navigation').height();
     if (isOnOffWhite(windowTop)) {
@@ -67,6 +106,7 @@ function colorNavigation() {
     }      
 }
 
+// RETURN WHETHER NAV IS ON OFF-WHITE
 function isOnOffWhite(x) {
     var isOnRow = false;
     $('.off-white').each(function() {

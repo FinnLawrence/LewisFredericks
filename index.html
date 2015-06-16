@@ -50,7 +50,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>03. Sketch design onto horn plate &amp; cut out</h3>
+                    <h3>03. Sketch design onto horn plate &amp; cut out</h3>
                     <div class="col-xs-6">
                         <img src="/img/carousel-steps-6.png" alt="Horn to Horn Plate"/>
                     </div>
@@ -61,7 +61,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>04. Buffing and edging frame</h3>
+                    <h3>04. Buffing and edging frame</h3>
                     <div class="col-xs-6">
                         <img src="/img/carousel-steps-8.png" alt="Buffing and edging frame"/>
                     </div>
@@ -72,7 +72,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>05. Bridge and nose</h3>
+                    <h3>05. Bridge and nose</h3>
                     <div class="col-xs-6 padded">
                         <img src="/img/carousel-steps-10.png" alt="Bridge and nose"/>
                     </div>
@@ -83,7 +83,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>06. Cutting and buffing legs and adding hinge</h3>
+                    <h3>06. Cutting and buffing legs and adding hinge</h3>
                     <div class="col-xs-6 padded">
                         <img src="/img/carousel-steps-12.png" alt="Bridge and nose"/>
                     </div>
@@ -94,7 +94,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>07. Fitting and buffing temples</h3>
+                    <h3>07. Fitting and buffing temples</h3>
                     <div class="col-xs-6 padded">
                         <img src="/img/carousel-steps-14.png" alt="Bridge and nose"/>
                     </div>
@@ -105,7 +105,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>08. Polishing and Wood Chips</h3>
+                    <h3>08. Polishing and Wood Chips</h3>
                     <div class="col-xs-6 padded">
                         <img src="/img/carousel-steps-16.png" alt="Bridge and nose"/>
                     </div>
@@ -116,7 +116,7 @@ description: ""
             </li>
             <li>
                 <div class="row homepage-slide">
-                        <h3>09. Fit lenses and engraving</h3>
+                    <h3>09. Fit lenses and engraving</h3>
                     <div class="col-xs-6 padded">
                         <img src="/img/carousel-steps-18.png" alt="Bridge and nose"/>
                     </div>
@@ -141,7 +141,7 @@ description: ""
     {% for frame in site.frames %}
     {% if isFirst %}
     {% assign isFirst = false %}
-    <div class="section-separator off-white"><div class="section-border"></div></div>
+    <div class="section-separator off-white"><div class="section-border"><h1>FRAMES</h1></div></div>
     {% else %}
     <div class="section-separator off-white"><div class="section-border"></div></div>
     {% endif %}
@@ -175,15 +175,64 @@ description: ""
 
 <!-- LOOKBOOK -->
 <div id="lookbook" class="nav-padding"></div>
+<div class="section-separator off-white"><div class="section-border"><h1>LOOKBOOK</h1></div></div>
 
 <!-- HORN -->
 <div id="horn" class="nav-padding"></div>
+<div class="section-separator off-white"><div class="section-border"><h1>HORN</h1></div></div>
 
 <!-- STOCKISTS -->
 <div id="stockists" class="nav-padding"></div>
+<div class="section-separator off-white"><div class="section-border"><h1>STOCKISTS</h1></div></div>
+<div class="row stockist-filters">
+    <div class="btn-group" data-toggle="buttons">
+        <label id="all" class="btn btn-default btn-stockist-filter active">
+            <input type="radio" name="cities" id="all-radio" autocomplete="off" checked>ALL
+        </label>
+        <!-- BUILD THE CITIES LIST -->
+        {% assign cities = '|' %}
+        {% for stockist in site.stockists %}
+        {% if cities contains stockist.city %}
+        {% else %}
+        {% assign cities = cities | append: stockist.city %}
+        {% assign cities = cities | append: '|' %}
+        {% endif %}
+        {% endfor %}
+        {% assign cities = cities | remove_first: '|' %}
+        {% assign cities = cities | split: '|' %}
+        {% for city in cities %}
+        <label id="{{ city | downcase | replace: ' ', '' }}" class="btn btn-default btn-stockist-filter">
+            <input type="radio" name="cities" id="{{ city | downcase | replace: ' ', '' }}-radio" autocomplete="off" checked>{{ city | upcase }}
+        </label>
+        {% endfor %}
+    </div>
+</div>
+<div class="row stockist-grid">
+    {% for stockist in site.stockists %}
+    <div id="{{ stockist.title | downcase | replace: ' ', '' }}" class="stockist col-md-4 col-sm-6 col-xs-12 {{ stockist.city | downcase | replace: ' ', '' }} {{ stockist.country | downcase | replace: ' ', '' }}">
+        <div class="stockist-card">
+            <h3>{{ stockist.title }}</h3>
+            <a target="_blank" href="{{ stockist.web-address }}"><p>{{ stockist.web-address | remove_first: "http://www." }}</p></a>
+            <a target="_blank" href="tel:{{ stockist.phone }}"><p>{{ stockist.phone }}</p></a>
+            <div class="stockist-address">
+                <p>{{ stockist.address }}</p>
+                {% if stockist.suburb != "" %}
+                <p>{{ stockist.suburb }}</p>
+                {% endif %}
+                <p>{{ stockist.city }}</p>
+                {% if stockist.state != "" %}
+                <p>{{ stockist.state }}</p>
+                {% endif %}
+                <p>{{ stockist.country }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 <!-- CONTACT -->
 <div id="contact" class="nav-padding"></div>
+<div class="section-separator off-white"><div class="section-border"><h1>CONTACT</h1></div></div>
 
 <!-- DETAILS MODAL -->
 <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="modal-frame-title" aria-hidden="true">
