@@ -1,10 +1,10 @@
 ---
-title: Auckland Fabric Downtown
-web-address: "http://www.occhiali.co.nz"
-phone: +64 9 376 3073
-address: 303 Ponsonby Road
-suburb: Ponsonby
+title: "Fabric | Downtown"
+web-address: "http://www.thisisfabric.com"
+phone: +64 9 366 4528
+address: 5 High St
+suburb: Downtown
 city: Auckland
-state: null
+state: ""
 country: New Zealand
 ---
