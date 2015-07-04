@@ -6,9 +6,13 @@ $(document).ready(function() {
 
     // SMOOTH SCROLL
     $('a[href^=#]').click(function(){
-        if ($.attr(this, 'href') === "#") {
-            return false;
+        if ($.attr(this, 'href') === "#" || $(this).hasClass("btn-tabpanel")) {
+            return true; // Allows the tabbed panes to work
         } else {
+            // Close mobile nav if it's open
+            if ($(this).closest('.navbar-collapse').hasClass("in")) {
+                $(this).closest('.navbar-collapse').removeClass("in");
+            }
             $('html, body').animate({
                 scrollTop: $( $.attr(this, 'href') ).offset().top
             }, 600);
@@ -35,7 +39,7 @@ $(document).ready(function() {
         }, 600);
         return false;
     });
-    
+
     // DETAILS MODAL
     $('#details-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget); // Button that triggered the modal

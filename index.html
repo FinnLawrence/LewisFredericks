@@ -174,14 +174,17 @@ description: ""
 
 <!-- LOOKBOOK -->
 <div id="lookbook" class="nav-padding"></div>
+<div class="nav-padding off-white"></div>
 <div class="section-separator off-white"><div class="section-border"><h1>LOOKBOOK</h1></div></div>
 
 <!-- HORN -->
 <div id="horn" class="nav-padding"></div>
+<div class="nav-padding off-white"></div>
 <div class="section-separator off-white"><div class="section-border"><h1>HORN</h1></div></div>
 
 <!-- STOCKISTS -->
 <div id="stockists" class="nav-padding"></div>
+<div class="nav-padding off-white"></div>
 <div class="section-separator off-white"><div class="section-border"><h1>STOCKISTS</h1></div></div>
 <div class="row stockist-filters">
     <div class="btn-group" data-toggle="buttons">
@@ -231,7 +234,87 @@ description: ""
 
 <!-- CONTACT -->
 <div id="contact" class="nav-padding"></div>
+<div class="nav-padding off-white"></div>
 <div class="section-separator off-white"><div class="section-border"><h1>CONTACT</h1></div></div>
+<div class="row contact-tabs">
+    <div class="tabbedpanel" role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="tab-list col-md-3" role="tablist">
+            <li role="presentation" class="active">
+                <a class="btn-tabpanel" href="#sales" aria-controls="home" role="tab" data-toggle="tab">SALES &amp; PRODUCT</a>
+            </li>
+            <li role="presentation" class="">
+                <a class="btn-tabpanel" href="#boutique" aria-controls="profile" role="tab" data-toggle="tab">BOUTIQUE</a>
+            </li>
+            <li role="presentation" class="">
+                <a class="btn-tabpanel" href="#bespoke" aria-controls="messages" role="tab" data-toggle="tab">BESPOKE</a>
+            </li>    
+        </ul>
+
+        <div class="clearfix"></div>
+
+        <!-- Tab panes -->
+        <div class="tab-content col-md-9">
+            <div role="tabpanel" class="tab-pane active" id="sales">
+                <div class="form-wrapper">
+                    <form method="post" action="#" id="sales-contact-form">
+                        <div class="form-header">
+                            <p>We'd love to hear from you - you can use the form below, or send us an email at <a href="TODO">TODO</a></p>
+                        </div>
+                        <div class="input-wrapper col-sm-6">
+                            <span class="input input--madoka">
+                                <input required name="name" type="text" class="form-control input__field input__field--madoka" id="sales-name-input">
+                                <label class="input__label input__label--madoka" for="sales-name-input">
+                                    <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                        <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                                    </svg>
+                                    <span class="input__label-content input__label-content--madoka">Name</span>
+                                </label>
+                            </span>
+                        </div>
+                        <div class="input-wrapper col-sm-6 right-input">
+                            <span class="input input--madoka">
+                                <input required name="email" type="email" class="form-control input__field input__field--madoka" id="sales-email-input">
+                                <label class="input__label input__label--madoka" for="sales-email-input">
+                                    <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                                        <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
+                                    </svg>
+                                    <span class="input__label-content input__label-content--madoka">Email</span>
+                                </label>
+                            </span>
+                        </div>
+
+                        <div class="input-wrapper col-xs-12">
+                            <textarea required name="message" type="text" class="form-control" id="sales-message-input" placeholder="Message"></textarea>
+                        </div>
+
+                        <input type="hidden" name="cc_emails[]" value="TODO" />
+
+                        <div class="btn-wrapper">
+                            <button class="btn btn-primary" type="submit" name="submit">SEND</button>
+                        </div>
+                        
+                        <script>
+                            $('#sales-contact-form').validate();
+                        </script>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="boutique">
+                <h5>Proin porttitor tortor id libero vehicula auctor. Pellentesque et consequat ex. Fusce aliquam velit odio, et fermentum mi tempus facilisis. Mauris feugiat hendrerit auctor. Fusce imperdiet dui rhoncus lacus placerat aliquet. In quis leo eget turpis dignissim mattis. Vivamus imperdiet magna et diam lacinia bibendum. Fusce erat justo, aliquet non ultricies vitae, aliquam ac neque. Suspendisse gravida est lacus, et lobortis nibh pellentesque at. Quisque at laoreet nunc. Nam consequat, lorem ut pulvinar tincidunt, felis risus scelerisque ex, ac gravida magna odio non risus. Suspendisse consequat egestas arcu non tristique. Fusce non ligula vitae felis lacinia bibendum in a lacus. Curabitur nec dictum felis. Cras convallis iaculis dui id elementum.</h5>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bespoke">
+                <h5>Fusce dapibus libero tellus, vitae commodo purus molestie quis. Nulla a scelerisque velit. Donec eget nisi at lorem sodales volutpat. Duis convallis imperdiet turpis nec fermentum. Sed et nunc nisi. Suspendisse euismod pellentesque condimentum. Curabitur eleifend sollicitudin diam, in luctus leo rutrum id. Aenean nunc libero, rhoncus ac ultrices eleifend, congue non nulla. Maecenas gravida viverra erat ac dignissim. Morbi ultricies dui a metus bibendum vulputate. Sed facilisis quis leo vitae dapibus. Phasellus odio velit, laoreet ut est quis, eleifend tincidunt purus. In hac habitasse platea dictumst. Nullam suscipit quis diam at posuere. Donec id ante at metus venenatis ullamcorper.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-padding"></div>
+<div class="nav-padding"></div>
+<div class="nav-padding"></div>
+<div class="nav-padding"></div>
 
 <!-- DETAILS MODAL -->
 <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="modal-frame-title" aria-hidden="true">
@@ -290,7 +373,9 @@ description: ""
                             <div class="col-md-6 col-xs-12 pull-down">
                                 <div class="view-stockists">
                                     <h4>VISIT A STOCKIST</h4>
-                                    <button type="button" class="btn btn-primary btn-stockists">View Stockists</button>
+                                    <div class="btn-wrapper">
+                                        <button type="button" class="btn btn-primary btn-stockists">View Stockists</button>
+                                    </div>
                                 </div>
                                 <form id="modal-enquiry-form" class="form-inline" method="post" action="#">
                                     <h4>ENQUIRE ONLINE</h4>
@@ -302,7 +387,7 @@ description: ""
                                             </svg>
                                             <span class="input__label-content input__label-content--madoka">Email</span></label>
                                     </span>
-                                    <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
+                                    <input type="hidden" name="cc_emails[]" value="TODO" />
                                     <button type="submit" class="btn btn-primary">Enquire</button>
                                 </form>
                                 <script>

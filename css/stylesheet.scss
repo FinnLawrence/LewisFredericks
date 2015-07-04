@@ -108,7 +108,7 @@ h4 {
     background-color: $off-white;
 }
 
-.btn-default:active, .btn-default:hover, .btn-default:focus, .btn-default.active {
+.btn-default:active, .btn-default:hover, .btn-default:focus, .btn-default.active, .active > .btn-default {
     color: $off-white;
     background-color: $dark-grey;
     border-color: $dark-grey;
@@ -128,6 +128,11 @@ h4 {
         margin-left: 15px !important;
         margin-bottom: 15px !important;
     }
+}
+
+.btn-wrapper {
+    display: inline-block;
+    width: 100%;
 }
 
 // NAVIGATION
@@ -336,19 +341,19 @@ h4 {
                 margin-bottom: 0;
             }
         }
-        
+
         > a:hover, > a:focus {
             text-decoration: none;
             color: #555;
         }
-        
+
         .stockist-address {
             border-top: 1px solid $dark-grey;
             margin-top: 5px;
             margin-bottom: 10px;
             padding-top: 5px;
             width: 60%;
-            
+
             p {
                 margin-bottom: 0px;
             }
@@ -362,6 +367,163 @@ h4 {
     }
 }
 
+// CONTACT
+
+.contact-tabs {
+    width: 90%;
+    margin: 20px auto;
+    padding: 0px;
+    border: 2px solid $dark-grey;
+    background-color: $off-white;
+
+    .tabbedpanel {
+
+        .tab-list {
+
+            padding: 0px;
+            margin: 0px;
+            background-color: $dark-grey;
+
+            li {
+                display: block;
+                background-color: $dark-grey;
+                text-align: center;
+                vertical-align: bottom;
+
+                a {
+                    display: block;
+                    color: $off-white;
+                    padding: 50px 10px;
+                }
+
+                a:focus, a:hover {
+                    text-decoration: none;
+                }
+            }
+
+            li.active {
+                background-color: $off-white;
+
+                a {
+                    color: $dark-grey;
+                }
+            }
+        }
+
+        .tab-content {
+            
+            .tab-pane {
+                
+                .form-wrapper {
+                    margin: 20px auto;
+                    padding: 25px;
+                    max-width: 550px;
+                    border: 2px solid $dark-grey;
+                    background-color: $light-grey;
+                    
+                    .input-wrapper {
+                        
+                        margin-bottom: 15px;
+                        
+                        textarea {
+                            border: 2px solid $dark-grey;
+                            border-radius: 0px;
+                            font-weight: bold;
+                        }
+                        
+                        input:focus, .input--filled > input {
+                            background-color: $off-white;
+                        }
+                    }
+                    
+                    .btn {
+                        margin: 0px 15px;
+                        float: right;
+                    }
+                    
+                    #sales-message-input-error {
+                        padding-top: 0px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-tabs {
+        
+        .clearfix {
+           display: none; 
+        }
+    }
+}
+
+@media (min-width: 668px) {
+    .input-wrapper.right-input > span.input {
+        float: right;
+        margin-right: 0px;
+        margin-left: auto;
+    }
+    
+    .input-wrapper.col-sm-6 {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .contact-tabs {
+        
+        .tab-list {
+            
+            li {
+                display: inline-block !important;
+                width: 33%;
+                float: left;
+            }
+        }
+    }
+}
+
+// FOOTER
+    
+.footer-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    border-top: 2px solid $dark-grey;
+    
+    .footer-social {
+        
+        text-align: center;
+        
+        .social-icons {
+            display: inline-block;
+            margin: 20px auto;
+            
+            a {
+                color: $dark-grey;
+                font-size: 6rem;
+                margin: 10px;
+            }
+            
+            a:active, a:focus, a:hover {
+                color: #777777;
+            }
+        }
+    }
+    
+    .footer-logo {
+        
+        img {
+            max-width: 90%;
+            margin: 20px auto;
+        }
+    }
+}
+    
 // MODAL
 
 .modal-content {
@@ -461,6 +623,10 @@ h4 {
     text-align: right;
 }
 
+.btn-stockists {
+    float: right;
+}
+    
 .input {
     width: auto;
 }
