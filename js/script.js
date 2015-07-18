@@ -55,8 +55,11 @@ $(document).ready(function() {
         var grossWeight = button.data('grossweight');
         var modal = $(this);
         $('#modal-frame-title').text(frameTitle);
+        $('#modal-frame-input').val(frameTitle);
         $('#modal-variant-title').text(variantTitle);
+        $('#modal-variant-input').val(variantTitle);
         $('#modal-lens-details').text(lensDetails);
+        $('#modal-lens-input').val(lensDetails);
         $('#modal-variant-image').attr("src", imagePath);
         $('#modal-frame-description').text(frameDesc);
         $('#modal-variant-description').text(varDesc);
