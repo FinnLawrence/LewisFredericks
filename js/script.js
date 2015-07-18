@@ -67,13 +67,13 @@ $(document).ready(function() {
 
 // Window Load
 $(window).load(function() {
-    centerSectionHeaders();
-
     var $grid = $('.stockist-grid').isotope({
         // options
         itemSelector: '.stockist',
         layoutMode: 'masonry'
     });
+    
+    $('.fullscreen-loading').fadeOut(600);
 });
 
 // Scrolling
@@ -81,24 +81,6 @@ $(window).scroll(function() {
     colorNavigation();
 
 });
-
-// CENTER SECTION HEADERS
-function centerSectionHeaders() {
-    $('.section-border > h1').each(function () {
-        var leftMargin = $(this).innerWidth() / 2;
-        $(this).css("margin-left", -leftMargin + "px");
-    });
-}
-
-// Calculate width of text from DOM element or string. By Phil Freo <http://philfreo.com>
-$.fn.textWidth = function(){
-    var html_org = $(this).html();
-    var html_calc = '<span>' + html_org + '</span>';
-    $(this).html(html_calc);
-    var width = $(this).find('span:first').width();
-    $(this).html(html_org);
-    return width;
-};
 
 // COLOR NAVIGATION
 function colorNavigation() {

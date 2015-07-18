@@ -5,6 +5,10 @@ $light-grey: #e8e8e8;
 $dark-grey: #454545;
 $off-white: #fefefe;
 
+$instagram: #3f729b;
+$facebook: #3b5998;
+$linkedin: #0077b5;
+
 // FONT
 
 @font-face {
@@ -41,10 +45,14 @@ body {
 
     h1 {
         position: absolute;
+        font-size: 30px;
         left: 50%;
         margin: 0px;
-        padding: 7px;
+        padding: 10px 10px 0px 10px;;
         background-color: $off-white;
+        -ms-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 
@@ -201,6 +209,10 @@ h4 {
 }
 
 .flexslider{
+
+    background-color: transparent;
+    border: 0px;
+
     .flex-direction-nav a {
         height: 50px;
         margin: -25px 0 0 ;
@@ -213,10 +225,15 @@ h4 {
 }
 
 .homepage-slide {
-    width: 55%;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
 
+    .lf-glasses-sketch {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+    
     h1 {
         margin-top: 0px;
     }
@@ -304,6 +321,125 @@ h4 {
 
 .slick-prev::before, .slick-next::before {
     color: $dark-grey;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+}
+
+// HORN
+
+.horn {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .horn-tabbed {
+        border: 2px solid $dark-grey;
+        background-color: $off-white;
+        text-align: center;
+
+        .tab-list {
+            list-style-type: none;
+            padding: 0px;
+
+            li {
+                display: inline-block;
+                width: 50%;
+                float: left;
+                background-color: $dark-grey;
+
+                a {
+                    color: $off-white !important;
+                    display: block;
+                    padding: 20px 10px;
+                    font-size: 24px;
+                }
+
+                a:hover, a:active, a:focus {
+                    text-decoration: none;
+                }
+            }
+
+            li.active {
+                background-color: $off-white;
+
+                a {
+                    color: $dark-grey !important;
+                }
+            }
+        }
+        
+        .tab-content {
+            margin-left: 15%;
+            margin-right: 15%;
+            
+            .tab-pane {
+                padding: 20px 0px;
+                
+                p {
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+                
+                table {
+                    td {
+                        width: 33%;
+                        padding: 5px;
+                        border: 2px solid $dark-grey;
+                    }
+                }
+                
+                a {
+                    color: $dark-grey !important;
+                }
+                
+                a:hover, a:active, a:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// LOOKBOOKS
+
+.lookbooks {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    .lookbook {
+
+        text-align: center;
+        margin-bottom: 20px;
+
+        .lookbook-title {
+            width: -moz-calc(100% - 20px);
+            width: -webkit-calc(100% - 20px);
+            width: -o-calc(100% - 20px);
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            border-top: 1px solid $dark-grey;
+
+            h3 {
+                margin-top: 10px;
+            }
+        }
+
+        .slick-slider {
+            margin-bottom: 15px;
+        }
+
+        .slick-slide {
+
+            img {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
 }
 
 // STOCKISTS
@@ -413,38 +549,41 @@ h4 {
         .clearfix {
             background-color: $dark-grey;
         }
-        
+
         .tab-content {
-            
+
             .tab-pane {
-                
+
                 .form-wrapper {
-                    margin: 20px auto;
+                    margin: 30px 20px;
                     padding: 25px;
-                    max-width: 550px;
                     border: 2px solid $dark-grey;
                     background-color: $light-grey;
-                    
+
                     .input-wrapper {
-                        
+
                         margin-bottom: 15px;
-                        
+                        display: inline-block;
+                        float: left;
+                        padding-left: 15px;
+                        padding-right: 15px;
+
                         textarea {
                             border: 2px solid $dark-grey;
                             border-radius: 0px;
                             font-weight: bold;
                         }
-                        
+
                         input:focus, .input--filled > input {
                             background-color: $off-white;
                         }
                     }
-                    
+
                     .btn {
                         margin: 0px 15px;
                         float: right;
                     }
-                    
+
                     #sales-message-input-error {
                         padding-top: 0px;
                         padding-right: 15px;
@@ -457,9 +596,9 @@ h4 {
 
 @media (min-width: 992px) {
     .contact-tabs {
-        
+
         .clearfix {
-           display: none; 
+            display: none; 
         }
     }
 }
@@ -470,7 +609,7 @@ h4 {
         margin-right: 0px;
         margin-left: auto;
     }
-    
+
     .input-wrapper.col-sm-6 {
         width: 50%;
         float: left;
@@ -480,15 +619,15 @@ h4 {
 @media (max-width: 991px) {
 
     .contact-tabs {
-        
+
         .tab-list {
-            
+
             li {
                 display: inline-block !important;
                 width: 33%;
                 float: left;
             }
-            
+
             .last {
                 float: right;
             }
@@ -497,41 +636,79 @@ h4 {
 }
 
 // FOOTER
-    
+
 .footer-wrapper {
     width: 95%;
     margin: 0 auto;
     border-top: 2px solid $dark-grey;
-    
+
     .footer-social {
-        
+
         text-align: center;
-        
+
         .social-icons {
             display: inline-block;
             margin: 20px auto;
-            
+
             a {
                 color: $dark-grey;
                 font-size: 6rem;
                 margin: 10px;
             }
+
+            .fa-facebook-square:active, .fa-facebook-square:focus, .fa-facebook-square:hover {
+                color: $facebook;
+            }
             
-            a:active, a:focus, a:hover {
-                color: #555;
+            .fa-instagram:active, .fa-instagram:focus, .fa-instagram:hover {
+                color: $instagram;
             }
         }
     }
-    
+
     .footer-logo {
-        
+
         img {
             max-width: 90%;
             margin: 20px auto;
         }
     }
 }
+
+// FULLSCREEN LOADING
+
+.fullscreen-loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: $off-white;
+    z-index: 10000;
     
+    .nav-loading {
+        width: 95%;
+        margin: 0 auto;
+        height: 52px;
+        border-bottom: 2px solid $dark-grey;
+    }
+    
+    .logo-loading {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 50vh;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        
+        img {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
 // MODAL
 
 .modal-content {
@@ -545,6 +722,10 @@ h4 {
     padding-bottom: 0px;
     position: relative;
     z-index: 5;
+}
+
+.modal-header button {
+    opacity: 1;
 }
 
 .modal-header h2 {
@@ -600,8 +781,9 @@ h4 {
     margin-bottom: 5px;
 }
 
-.dimensions-detail {
+.dimensions {
     text-align: center;
+    padding-top: 15px;
 }
 
 .close span {
@@ -634,7 +816,7 @@ h4 {
 .btn-stockists {
     float: right;
 }
-    
+
 .input {
     width: auto;
 }
@@ -692,8 +874,6 @@ label.error {
     }
 
     .dimensions {
-        text-align: center;
-        padding-top: 15px;
         border-left: 0px;
     }
 }
