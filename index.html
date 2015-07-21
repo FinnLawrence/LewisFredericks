@@ -210,7 +210,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                             <h2>SCHEDULE ONE</h2>
                         </th>
                         </tr>
-                        <tr>
+                        <tr class="headings">
                             <td><h3>Dark Horn</h3></td>
                             <td><h3>Light Horn</h3></td>
                             <td><h3>Yellow Horn</h3></td>
@@ -316,13 +316,13 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
         <div class="tab-content col-md-9">
             <div role="tabpanel" class="tab-pane active" id="sales">
                 <div class="form-wrapper">
-                    <form method="post" action="#" id="sales-contact-form">
+                    <form method="post" action="/success" id="sales-contact-form">
                         <div class="form-header">
                             <p>For all product enquires please send us a message here or e-mail us at <a href="mailto:info@lewisfredericks.co.nz">info@lewisfredericks.co.nz</a></p>
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="name" type="text" class="form-control input__field input__field--madoka" id="sales-name-input">
+                                <input required name="Sales-Name" type="text" class="form-control input__field input__field--madoka" id="sales-name-input">
                                 <label class="input__label input__label--madoka" for="sales-name-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -333,7 +333,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="email" type="email" class="form-control input__field input__field--madoka" id="sales-email-input">
+                                <input required name="Sales-Email" type="email" class="form-control input__field input__field--madoka" id="sales-email-input">
                                 <label class="input__label input__label--madoka" for="sales-email-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -344,7 +344,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
 
                         <div class="input-wrapper col-xs-12">
-                            <textarea required name="message" type="text" class="form-control" id="sales-message-input" placeholder="Message"></textarea>
+                            <textarea required name="Sales-Message" type="text" class="form-control" id="sales-message-input" placeholder="Message"></textarea>
                         </div>
 
                         <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
@@ -361,13 +361,13 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             </div>
             <div role="tabpanel" class="tab-pane" id="press">
                 <div class="form-wrapper">
-                    <form method="post" action="#" id="press-contact-form">
+                    <form method="post" action="/success" id="press-contact-form">
                         <div class="form-header">
                             <p>For all Press enquires please send us a message here:</p>
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="name" type="text" class="form-control input__field input__field--madoka" id="press-name-input">
+                                <input required name="Press-Name" type="text" class="form-control input__field input__field--madoka" id="press-name-input">
                                 <label class="input__label input__label--madoka" for="press-name-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -378,7 +378,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="email" type="email" class="form-control input__field input__field--madoka" id="press-email-input">
+                                <input required name="Press-Email" type="email" class="form-control input__field input__field--madoka" id="press-email-input">
                                 <label class="input__label input__label--madoka" for="press-email-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -389,7 +389,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
 
                         <div class="input-wrapper col-xs-12">
-                            <textarea required name="message" type="text" class="form-control" id="press-message-input" placeholder="Message"></textarea>
+                            <textarea required name="Press-Message" type="text" class="form-control" id="press-message-input" placeholder="Message"></textarea>
                         </div>
 
                         <input type="hidden" name="cc_emails[]" value="josh@lewisfredericks.co.nz" />
@@ -406,13 +406,13 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             </div>
             <div role="tabpanel" class="tab-pane" id="bespoke">
                 <div class="form-wrapper">
-                    <form method="post" action="#" id="bespoke-contact-form">
+                    <form method="post" action="/success" id="bespoke-contact-form">
                         <div class="form-header">
                             <p>For enquires regarding bespoke and custom made Lewis Fredericks frames please send us a message or e-mail us at <a href="mailto:bespoke@lewisfredericks.co.nz">bespoke@lewisfredericks.co.nz</a></p>
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="name" type="text" class="form-control input__field input__field--madoka" id="bespoke-name-input">
+                                <input required name="Bespoke-Name" type="text" class="form-control input__field input__field--madoka" id="bespoke-name-input">
                                 <label class="input__label input__label--madoka" for="bespoke-name-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -423,7 +423,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
                         <div class="input-wrapper">
                             <span class="input input--madoka">
-                                <input required name="email" type="email" class="form-control input__field input__field--madoka" id="bespoke-email-input">
+                                <input required name="Bespoke-Email" type="email" class="form-control input__field input__field--madoka" id="bespoke-email-input">
                                 <label class="input__label input__label--madoka" for="bespoke-email-input">
                                     <svg class="graphic graphic--madoka" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
                                         <path d="m0,0l404,0l0,77l-404,0l0,-77z"></path>
@@ -434,7 +434,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                         </div>
 
                         <div class="input-wrapper col-xs-12">
-                            <textarea required name="message" type="text" class="form-control" id="bespoke-message-input" placeholder="Message"></textarea>
+                            <textarea required name="Bespoke-Message" type="text" class="form-control" id="bespoke-message-input" placeholder="Message"></textarea>
                         </div>
 
                         <input type="hidden" name="cc_emails[]" value="bespoke@lewisfredericks.co.nz" />
@@ -533,7 +533,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                                     <input type="hidden" name="variant" value="modal-variant" id="modal-variant-input"/>
                                     <input type="hidden" name="lens" value="modal-lens" id="modal-lens-input"/>
                                     <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
-                                    <button type="submit" class="btn btn-primary">Enquire</button>
+                                    <button class="btn btn-primary" type="submit" name="submit">Enquire</button>
                                 </form>
                                 <script>
                                     $('#modal-enquiry-form').validate();

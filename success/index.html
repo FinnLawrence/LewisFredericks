@@ -1,0 +1,40 @@
+---
+layout: homepage
+title: "Message Received - Lewis Fredericks - Handcrafted Horn Eyewear"
+description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashioned from horn, the previously wasted by-product of domesticated Buffalo, Ram and Ox."
+---
+
+<style>.navbar-collapse {opacity: 0} .navbar-header {opacity: 0}</style>
+<script>
+    $(document).ready(function () {
+        affixFooter();
+    });
+
+    $(window).load(function () {
+        affixFooter();
+    });
+
+    $(window).resize(function () {
+        affixFooter();
+    });
+
+    function affixFooter() {
+        var windowHeight = $(window).height();
+        var bodyHeight = $('html').height();
+        //alert(windowHeight + ", " + bodyHeight);
+        if (bodyHeight < windowHeight) {
+            $('footer').addClass("fixed-footer");
+        } else {
+            $('footer').removeClass("fixed-footer");
+        }
+    }
+</script>
+
+<div class="success-message">
+    <h1 class="editable">YOUR MESSAGE WAS RECEIVED</h1>
+    <p class="editable">We will respond to your enquiry shortly. Click below to return.</p>
+    <br/>
+    <a href="/">
+        <img src="/img/logo.png" alt="Lewis Fredericks Logo"/>
+    </a>
+</div>
