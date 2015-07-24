@@ -210,11 +210,11 @@ h4 {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: center;
-    
+
     h1 {
         margin-top: 0px;
     }
-    
+
     img {
         width: 80%;
         max-width: 300px;
@@ -253,17 +253,18 @@ h4 {
 }
 
 .homepage-slide {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
 
     .lf-glasses-sketch {
-        width: 70% !important;
+        width: 50% !important;
         margin: 0 auto;
     }
 
     h1 {
         margin-top: 0px;
+        opacity: 0;
     }
 
     > h3 {
@@ -273,6 +274,13 @@ h4 {
 
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
+    }
+
+    .col-xs-4 {
+        img {
+            max-width: 400px;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -300,6 +308,14 @@ h4 {
 
 @media only screen and(max-width: 767px) {
     .homepage-slide {
+
+        width: 70%;
+
+        .lf-glasses-sketch {
+            width: 80% !important;
+            margin: 0 auto;
+        }
+
         h1 {
             font-size: 14px;
         }
@@ -307,6 +323,16 @@ h4 {
         .col-xs-4 {
             padding-left: 5px;
             padding-right: 5px;
+        }
+    }
+}
+
+@media only screen and(min-width: 768px) {
+    .homepage-slide {
+        .col-xs-4 {
+            img {
+                padding: 30px;
+            }
         }
     }
 }

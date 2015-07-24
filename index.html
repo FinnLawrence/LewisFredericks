@@ -4,8 +4,10 @@ title: "Lewis Fredericks - Handcrafted Horn Eyewear"
 description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashioned from horn, the previously wasted by-product of domesticated Buffalo, Ram and Ox."
 ---
 <!-- HOMEPAGE CAROUSEL -->
-<div id="home" class="nav-padding off-white"></div>
-<div class="homepage-carousel off-white">
+<div id="home" class="nav-padding"></div>
+<div class="nav-padding"></div>
+<div class="nav-padding"></div>
+<div class="homepage-carousel">
     <div class="flexslider flexslider-desktop">
         <ul class="slides">
             <li>
@@ -99,10 +101,14 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     <div class="homepage-buttons">
         <div class="button-wrapper">
             <a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
+            <!--
             <a href="#{{ site.frames[0].title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="btn btn-primary">VIEW THE FRAMES</a>
+-->
         </div>
     </div>
 </div>
+<div class="nav-padding"></div>
+<div class="nav-padding"></div>
 
 <!-- FRAMES PODIUMS -->
 <div>
@@ -121,10 +127,10 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <div id="hero-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="podium-hero">
                 {% for variant in frame.variants %}
                 <div>
-                    <img src="{{ variant.image-path }}" alt="{{ frame.title }} {{ variant.title }}">
+                    <img src="{{ variant.image_path }}" alt="{{ frame.title }} {{ variant.title }}">
                     <h2>{{ frame.title | upcase}}</h2>
                     <h4>{{ variant.title | upcase}} | {{ variant.lens | upcase}}</h4>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image-path }}">DETAILS</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image_path }}">DETAILS</button>
                 </div>
                 {% endfor %}
             </div>
@@ -132,7 +138,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <div id="nav-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', '' }}" class="podium-nav">
                 {% for variant in frame.variants %}
                 <div class="">
-                    <img src="{{ variant.thumbnail-path }}" alt="{{ frame.title }} {{ variant.title }}">
+                    <img src="{{ variant.thumbnail_path }}" alt="{{ frame.title }} {{ variant.title }}">
                 </div>
                 {% endfor %}
             </div>
