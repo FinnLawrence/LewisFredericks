@@ -86,13 +86,13 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <li>
                 <div class="row homepage-slide">
                     <div class="col-xs-4">
-                        <img src="/img/carousel-steps-2.png" alt="Lewis Fredericks Process"/>
+                        <img src="/img/carousel-steps-4.png" alt="Lewis Fredericks Process"/>
                     </div>
                     <div class="col-xs-4">
                         <img src="/img/carousel-steps-3.png" alt="Lewis Fredericks Process"/>
                     </div>
                     <div class="col-xs-4">
-                        <img src="/img/carousel-steps-4.png" alt="Lewis Fredericks Process"/>
+                        <img src="/img/carousel-steps-2.png" alt="Lewis Fredericks Process"/>
                     </div>
                 </div>
             </li>
@@ -100,10 +100,9 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     </div>
     <div class="homepage-buttons">
         <div class="button-wrapper">
-            <a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
-            <!--
-            <a href="#{{ site.frames[0].title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="btn btn-primary">VIEW THE FRAMES</a>
+            <!--<a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
 -->
+            <a onclick="ga('send', 'event', 'Button', 'Click', 'View-the-frames');" href="#frames" class="btn btn-primary">VIEW THE FRAMES</a>
         </div>
     </div>
 </div>
@@ -116,7 +115,9 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     {% for frame in site.frames %}
     {% if isFirst %}
     {% assign isFirst = false %}
-    <div class="section-separator off-white"><div class="section-border"></div></div>
+    <div id="frames" class="nav-padding"></div>
+    <div class="nav-padding off-white"></div>
+    <div class="section-separator off-white"><div class="section-border"><h1 class="editable">FRAMES</h1></div></div>
     {% else %}
     <div class="section-separator off-white"><div class="section-border"></div></div>
     {% endif %}
@@ -130,7 +131,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                     <img src="{{ variant.image_path }}" alt="{{ frame.title }} {{ variant.title }}">
                     <h2>{{ frame.title | upcase}}</h2>
                     <h4>{{ variant.title | upcase}} | {{ variant.lens | upcase}}</h4>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image_path }}">DETAILS</button>
+                    <button  onclick="ga('send', 'event', 'Button', 'Click', 'Frames-{{ frame.title | replace: ' ', '-' | replace: '.', '' }}-{{ variant.title | replace: ' ', '-' | replace: '.', '' }}');" type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image_path }}">DETAILS</button>
                 </div>
                 {% endfor %}
             </div>
@@ -252,7 +253,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
 <div class="section-separator off-white"><div class="section-border"><h1 class="editable">STOCKISTS</h1></div></div>
 <div class="row stockist-filters">
     <div class="btn-group" data-toggle="buttons">
-        <label id="all" class="btn btn-default btn-stockist-filter active">
+        <label onclick="ga('send', 'event', 'Button', 'Click', 'Stockists-All');" id="all" class="btn btn-default btn-stockist-filter active">
             <input type="radio" name="cities" id="all-radio" autocomplete="off" checked>ALL
         </label>
         <!-- BUILD THE CITIES LIST -->
@@ -267,7 +268,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
         {% assign cities = cities | remove_first: '|' %}
         {% assign cities = cities | split: '|' %}
         {% for city in cities %}
-        <label id="{{ city | downcase | replace: ' ', '' }}" class="btn btn-default btn-stockist-filter">
+        <label onclick="ga('send', 'event', 'Button', 'Click', 'Stockists-{{ city }}');" id="{{ city | downcase | replace: ' ', '' }}" class="btn btn-default btn-stockist-filter">
             <input type="radio" name="cities" id="{{ city | downcase | replace: ' ', '' }}-radio" autocomplete="off" checked>{{ city | upcase }}
         </label>
         {% endfor %}
@@ -521,7 +522,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                                 <div class="view-stockists">
                                     <h4 class="editable">VISIT A STOCKIST</h4>
                                     <div class="btn-wrapper">
-                                        <button type="button" class="btn btn-primary btn-stockists">View Stockists</button>
+                                        <button onclick="ga('send', 'event', 'Button', 'Click', 'Modal-Visit-a-stockist');" type="button" class="btn btn-primary btn-stockists">View Stockists</button>
                                     </div>
                                 </div>
                                 <form id="modal-enquiry-form" class="form-inline" method="post" action="/success">
@@ -538,7 +539,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                                     <input type="hidden" name="variant" value="modal-variant" id="modal-variant-input"/>
                                     <input type="hidden" name="lens" value="modal-lens" id="modal-lens-input"/>
                                     <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
-                                    <button class="btn btn-primary" type="submit" name="submit">Enquire</button>
+                                    <button onclick="ga('send', 'event', 'Button', 'Click', 'Modal-Enquire');" class="btn btn-primary" type="submit" name="submit">Enquire</button>
                                 </form>
                                 <script>
                                     $('#modal-enquiry-form').validate();
@@ -549,7 +550,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button onclick="ga('send', 'event', 'Button', 'Click', 'Modal-Close');" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
