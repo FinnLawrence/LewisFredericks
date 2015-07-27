@@ -72,7 +72,7 @@ h4 {
     top: 0px;
     left: 0px;
     background-color: $light-grey;
-    z-index: 1000;
+    z-index: 1500;
     text-align: center;
     padding: 20px;
 }
@@ -249,7 +249,7 @@ h4 {
 
 .flexslider-desktop {
     padding-top: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
 }
 
 .homepage-slide {
@@ -754,7 +754,7 @@ footer.fixed-footer {
     top: 0px;
     left: 0px;
     background-color: $light-grey;
-    z-index: 900;
+    z-index: 1200;
 
     .nav-loading {
         width: 95%;
