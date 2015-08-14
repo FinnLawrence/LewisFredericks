@@ -1,8 +1,8 @@
 ---
 title: Eyestyle
-web-address: "http://www.eyestyle.co.nz/"
+web-address: "http://www.eyestyle.co.nz"
 phone: 09 489 3370
-address: "Shop 121, Milford Shopping Centre, 24 Milford Road"
+address: "Shop 121, Milford Shopping Centre"
 suburb: North Shore
 city: Auckland
 state: ""
