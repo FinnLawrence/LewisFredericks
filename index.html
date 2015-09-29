@@ -5,109 +5,34 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
 ---
 <!-- HOMEPAGE CAROUSEL -->
 <div id="home" class="nav-padding"></div>
-<div class="nav-padding"></div>
-<div class="nav-padding"></div>
 <div class="homepage-carousel">
     <div class="flexslider flexslider-desktop">
         <ul class="slides">
             <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-12">
-                        <img class="lf-glasses-sketch" src="/img/carousel-steps-1.png" alt="Handcrafted Horn Eyewear" />
-                        <h1>Handcrafted Horn Eyewear</h1>
-                    </div>
+                <div class="titanium-slide">
+                    <div id="titanium-slide-1" class="img"></div>
                 </div>
             </li>
             <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-17.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-18.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-19.png" alt="Lewis Fredericks Process" />
-                    </div>
+                <div class="titanium-slide">
+                    <div id="titanium-slide-2" class="img"></div>
                 </div>
             </li>
             <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-14.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-15.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-16.png" alt="Lewis Fredericks Process" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-11.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-12.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-13.png" alt="Lewis Fredericks Process" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-8.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-9.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-10.png" alt="Lewis Fredericks Process" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-5.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-6.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-7.png" alt="Lewis Fredericks Process" />
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="row homepage-slide">
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-4.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-3.png" alt="Lewis Fredericks Process" />
-                    </div>
-                    <div class="col-xs-4">
-                        <img src="/img/carousel-steps-2.png" alt="Lewis Fredericks Process" />
-                    </div>
+                <div class="titanium-slide">
+                    <div id="titanium-slide-3" class="img"></div>
                 </div>
             </li>
         </ul>
-    </div>
-    <div class="homepage-buttons">
-        <div class="button-wrapper">
-            <!--<a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
+        <div class="homepage-buttons">
+            <div class="button-wrapper">
+                <!--<a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
 -->
-            <a onclick="ga('send', 'event', 'Button', 'Click', 'View-the-frames');" href="#frames" class="btn btn-primary">VIEW THE FRAMES</a>
+                <a onclick="ga('send', 'event', 'Button', 'Click', 'Coming-soon');" class="btn btn-primary" data-toggle="modal" data-target="#titanium-modal">COMING SOON</a>
+            </div>
         </div>
     </div>
 </div>
-<div class="nav-padding"></div>
-<div class="nav-padding"></div>
 
 <!-- FRAMES PODIUMS -->
 <div>
@@ -115,7 +40,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     {% for frame in site.frames %}
     {% if isFirst %}
     {% assign isFirst = false %}
-    <div id="frames" class="nav-padding"></div>
+    <div id="frames" class="nav-padding off-white"></div>
     <div class="nav-padding off-white"></div>
     <div class="section-separator off-white"><div class="section-border"><h1 class="editable">FRAMES</h1></div></div>
     {% else %}
@@ -463,6 +388,46 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
 </div>
 <div class="nav-padding"></div>
 <div class="nav-padding"></div>
+
+<!-- TITANIUM MODAL -->
+<div class="modal fade" id="titanium-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 id="modal-variant-title">HORN &times; JAPANESE TITANIUM</h4>
+                <p>Coming Soon</p>
+                <h6>REGISTER YOUR INTEREST</h6>
+            </div>
+            <div class="form-wrapper">
+                <form method="post" action="/success" id="titanium-contact-form">
+
+                    <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
+                    
+                    <div class="input-wrapper">
+                        <span class="input input--madoka">
+                            <input required name="Titanium-Email" type="email" class="form-control input__field input__field--madoka" id="titanium-email-input" />
+                            <label class="input__label input__label--madoka" for="titanium-email-input">
+                                <svg class="graphic graphic--madoka" width="100%" height="100%" viewbox="0 0 404 77" preserveaspectratio="none">
+                                    <path d="m0,0l404,0l0,77l-404,0l0,-77z" />
+                                </svg>
+                                <span class="input__label-content input__label-content--madoka">Email</span>
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <button class="btn btn-primary" type="submit" name="submit">SEND</button>
+                    </div>
+
+                    <script>
+                        $('#titanium-contact-form').validate();
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- DETAILS MODAL -->
 <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="modal-frame-title" aria-hidden="true">

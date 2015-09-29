@@ -125,6 +125,11 @@ h4 {
 .btn {
     border: 2px solid $dark-grey;
     border-radius: 0px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 .btn:focus, .btn:active {
@@ -248,8 +253,7 @@ h4 {
 }
 
 .flexslider-desktop {
-    padding-top: 70px;
-    padding-bottom: 70px;
+
 }
 
 .homepage-slide {
@@ -332,6 +336,88 @@ h4 {
         .col-xs-4 {
             img {
                 padding: 30px;
+            }
+        }
+    }
+}
+
+// TITANIUM CAROUSEL
+
+#titanium-slide-1 {
+    background-image: url(/img/titanium-carousel-1.jpg);
+    background-position: bottom;
+}
+
+#titanium-slide-2 {
+    background-image: url(/img/titanium-carousel-2.jpg);
+}
+
+#titanium-slide-3 {
+    background-image: url(/img/titanium-carousel-3.jpg);
+    background-position: bottom;
+}
+
+.titanium-slide {
+    height: -moz-calc(100vh - 52px);
+    height: -webkit-calc(100vh - 52px);
+    height: -o-calc(100vh - 52px);
+    height: calc(100vh - 52px);
+    padding: 2.5vw;
+
+    .img {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.flex-direction-nav {
+    display: none;
+}
+
+.flex-control-nav {
+    position: absolute;
+    top: -moz-calc(75vh + 50px);
+    top: -webkit-calc(75vh + 50px);
+    top: -o-calc(75vh + 50px);
+    top: calc(75vh + 50px);
+    bottom: auto;
+    width: 100%;
+    z-index: 10;
+}
+
+.homepage-buttons {
+    position: absolute;
+    top: 75vh;
+    width: 100%;
+    z-index: 10;
+}
+
+.flexslider {
+    margin-bottom: 0px;
+}
+
+#titanium-modal {
+
+    .modal-dialog {
+
+        top: -moz-calc(50vh - 84px);
+        top: -webkit-calc(50vh - 84px);
+        top: -o-calc(50vh - 84px);
+        top: calc(50vh - 84px);
+
+        .modal-content {
+
+            .form-wrapper {
+                padding: 15px;
+
+                .input-wrapper {
+                    display: inline;
+                }
+
+                .btn-wrapper {
+                    display: inline;
+                }
             }
         }
     }
@@ -739,6 +825,14 @@ h4 {
     }
 }
 
+.fa {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
 footer.fixed-footer {
     position: fixed;
     bottom: 0px;
@@ -776,7 +870,7 @@ footer.fixed-footer {
             max-width: 100%;
             margin-bottom: 30px;
         }
-        
+
         #loading-icon {
             max-width: 64px;
         }

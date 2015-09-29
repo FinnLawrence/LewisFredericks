@@ -3,6 +3,7 @@ $(document).ready(function() {
     colorNavigation();
 
     $('.flexslider').flexslider();
+    $('.flexslider').flexslider('pause');
 
     // SMOOTH SCROLL
     $('a[href^=#]').click(function(){
@@ -77,12 +78,13 @@ $(window).load(function() {
     });
     
     $('.fullscreen-loading').fadeOut(600);
+    $('.flexslider').flexslider('play');
+    colorNavigation();
 });
 
 // Scrolling
 $(window).scroll(function() {
     colorNavigation();
-
 });
 
 // COLOR NAVIGATION
