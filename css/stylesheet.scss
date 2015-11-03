@@ -475,6 +475,7 @@ img.lazy {
 
 .img-wrapper {
     position: relative;
+    margin: 0 auto;
 }
 
 .img-wrapper img {
@@ -484,17 +485,16 @@ img.lazy {
 
 .podium-hero .img-wrapper {
     width: 55%;
-    margin: 0 auto;
+}
+
+.podium-nav .img-wrapper {
+    width: 80%;
 }
 
 .podium-nav {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-}
-
-.podium-nav img {
-    width: 80%;
 }
 
 .slick-slide > img {
