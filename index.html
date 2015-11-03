@@ -53,7 +53,10 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <div id="hero-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="podium-hero">
                 {% for variant in frame.variants %}
                 <div>
-                    <img src="{{ variant.image_path }}" alt="{{ frame.title }} {{ variant.title }}" />
+                    <div class="img-wrapper">
+                        <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'1200'%20height%3D'500'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
+                        <img class="lazy" data-lazy="{{ variant.image_path }}" alt="{{ frame.title }} {{ variant.title }}"/>
+                    </div>
                     <h2>{{ frame.title | upcase}}</h2>
                     <h4>{{ variant.title | upcase}} | {{ variant.lens | upcase}}</h4>
                     <button onclick="ga('send', 'event', 'Button', 'Click', 'Frames-{{ frame.title | replace: ' ', '-' | replace: '.', '' }}-{{ variant.title | replace: ' ', '-' | replace: '.', '' }}');" type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" data-title="{{ frame.title | upcase }}" data-variant="{{ variant.title | upcase}} | {{ variant.lens | upcase}}" data-lensdetails="{{ variant.lens-details }}" data-description="{{ frame.description }}" data-vardesc="{{ variant.description }}" data-width="{{ frame.width }}" data-height="{{ frame.height }}" data-netweight="{{ frame.net-weight }}" data-grossweight="{{ frame.gross-weight }}" data-imgpath="{{ variant.image_path }}">DETAILS</button>
@@ -64,7 +67,10 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <div id="nav-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', '' }}" class="podium-nav">
                 {% for variant in frame.variants %}
                 <div>
-                    <img src="{{ variant.thumbnail_path }}" alt="{{ frame.title }} {{ variant.title }}" />
+                    <div class="img-wrapper">
+                        <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'900'%20height%3D'675'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
+                        <img class="lazy" data-lazy="{{ variant.thumbnail_path }}" alt="{{ frame.title }} {{ variant.title }}"/>
+                    </div>
                 </div>
                 {% endfor %}
             </div>
@@ -84,7 +90,12 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
             <div id="slider-{{ lookbook.title | downcase | replace: ' ', '-' | replace: '.', '' | replace: '|', '-' | replace: '/', '-'}}">
                 {% for img in lookbook.images %}
                 <div>
-                    <a target="_blank" href="{{ lookbook.pdf_path }}"><img src="{{ img.img_path }}" alt="{{ lookbook.title }}" /></a>
+                    <a target="_blank" href="{{ lookbook.pdf_path }}">
+                        <div class="img-wrapper">
+                            <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'500'%20height%3D'500'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
+                            <img class="lazy" data-lazy="{{ img.img_path }}" alt="{{ lookbook.title }}" />
+                        </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
@@ -403,7 +414,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                 <form method="post" action="/success" id="titanium-contact-form">
 
                     <input type="hidden" name="cc_emails[]" value="info@lewisfredericks.co.nz" />
-                    
+
                     <div class="input-wrapper">
                         <span class="input input--madoka">
                             <input required name="Titanium-Email" type="email" class="form-control input__field input__field--madoka" id="titanium-email-input" />
@@ -528,6 +539,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     $('#hero-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: 'ondemand',
         arrows: false,
         asNavFor: '#nav-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}',
         adaptiveHeight: true,
@@ -537,6 +549,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
      $('#nav-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}').slick({
          slidesToShow: 3,
          slidesToScroll: 1,
+         lazyLoad: 'ondemand',
          asNavFor: '#hero-for-{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}',
          dots: true,
          centerMode: true,
@@ -548,6 +561,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
      $('#slider-{{ lookbook.title | downcase | replace: ' ', '-' | replace: '.', '' | replace: '|', '-' | replace: '/', '-'}}').slick({
          slidesToShow: 1,
          slidesToScroll: 1,
+         lazyLoad: 'ondemand',
          arrows: false,
          adaptiveHeight: true,
          autoplay: true,

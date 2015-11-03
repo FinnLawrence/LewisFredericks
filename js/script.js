@@ -76,7 +76,12 @@ $(window).load(function() {
         itemSelector: '.stockist',
         layoutMode: 'masonry'
     });
-    
+
+    // Lazyload
+    //$('img.lazy').lazyload({
+        //effect : "fadeIn"
+    //});
+
     $('.fullscreen-loading').fadeOut(600);
     $('.flexslider').flexslider('play');
     colorNavigation();
@@ -91,9 +96,9 @@ $(window).scroll(function() {
 function colorNavigation() {
     var windowTop = $(window).scrollTop() + $('#main-navigation').height();
     if (isOnOffWhite(windowTop)) {
-        $('#main-navigation').css('background-color','#fefefe');
+        $('#main-navigation').addClass("light-navigation");
     } else {
-        $('#main-navigation').css('background-color','#e8e8e8');
+        $('#main-navigation').removeClass("light-navigation");
     }      
 }
 
