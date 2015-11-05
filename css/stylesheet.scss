@@ -516,8 +516,6 @@ img.lazy {
 
         .h-wrapper {
             vertical-align: middle;
-            padding-left: 100px;
-            padding-right: 100px;
         }
     }
 
@@ -525,7 +523,20 @@ img.lazy {
         position: static;
 
         .button-wrapper{
-            padding: 10px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .thirds-slide {
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 30px;
+            }
         }
     }
 }
@@ -538,6 +549,25 @@ img.lazy {
             .h-wrapper {
                 padding-left: 100px;
                 padding-right: 100px;
+            }
+        }
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1368px) {
+    .thirds-slide {
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 10px;
             }
         }
     }
@@ -577,8 +607,10 @@ img.lazy {
     color: $dark-grey;
 }
 
-.slick-dots {
-    bottom: 0px;
+.homepage-carousel {
+    .slick-dots {
+        bottom: 0px;
+    }
 }
 
 .slick-wrapper {
