@@ -22,6 +22,10 @@ $linkedin: #0077b5;
 
 // GENERAL
 
+:focus {
+    outline: none;
+}
+
 html, body, h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'national-regular', sans-serif;
 }
@@ -178,7 +182,7 @@ h4 {
     .navbar-nav > li > .dropdown-menu {
         background-color: $light-grey;
     }
-    
+
     .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
         background-color: $off-white;
     }
@@ -478,9 +482,95 @@ img.lazy {
     margin: 0 auto;
 }
 
+.img-wrapper.thirds {
+    display: inline-block;
+    float: left;
+    width: 33.33333%;
+    /* make sure left/right margins or left/right padding are 0px here
+    - it'll mess with the width otherwise*/
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    img {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    img.lazy {
+        border: 10px solid $off-white;
+    }
+}
+
 .img-wrapper img {
     max-width: 100%;
     width: 100%;
+}
+
+.thirds-slide {
+    padding: 2.5vw;
+
+    .v-wrapper {
+        vertical-align: middle;
+
+        .h-wrapper {
+            vertical-align: middle;
+        }
+    }
+
+    .homepage-buttons {
+        position: static;
+
+        .button-wrapper{
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .thirds-slide {
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .thirds-slide {
+
+        .v-wrapper {
+
+            .h-wrapper {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+        }
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1368px) {
+    .thirds-slide {
+
+        .homepage-buttons {
+
+            .button-wrapper{
+                padding-bottom: 10px;
+            }
+        }
+    }
 }
 
 .podium-hero .img-wrapper {
@@ -497,6 +587,14 @@ img.lazy {
     margin-bottom: 50px;
 }
 
+#landing-carousel {
+    margin-bottom: 0px;
+
+    .slick-dots {
+        bottom: 10px;
+    }
+}
+
 .slick-slide > img {
     margin: 0 auto;
 }
@@ -507,6 +605,16 @@ img.lazy {
 
 .slick-prev::before, .slick-next::before {
     color: $dark-grey;
+}
+
+.homepage-carousel {
+    .slick-dots {
+        bottom: 0px;
+    }
+}
+
+.slick-wrapper {
+    position: relative;
 }
 
 .dropdown:hover .dropdown-menu {

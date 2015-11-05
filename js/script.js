@@ -1,9 +1,12 @@
+
+
+
 $(document).ready(function() {  
     // Color nav
     colorNavigation();
-
-    $('.flexslider').flexslider();
-    $('.flexslider').flexslider('pause');
+    
+    // Start sliders
+    $('.slick').slick();
 
     // SMOOTH SCROLL
     $('a[href^=#]').click(function(){
@@ -83,7 +86,6 @@ $(window).load(function() {
     //});
 
     $('.fullscreen-loading').fadeOut(600);
-    $('.flexslider').flexslider('play');
     colorNavigation();
 });
 
