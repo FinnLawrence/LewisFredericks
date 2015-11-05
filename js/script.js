@@ -85,7 +85,7 @@ $(window).load(function() {
         //effect : "fadeIn"
     //});
 
-    $('.fullscreen-loading').fadeOut(600);
+    //$('.fullscreen-loading').fadeOut(600);
     colorNavigation();
 });
 
