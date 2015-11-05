@@ -482,7 +482,22 @@ img.lazy {
     margin: 0 auto;
 }
 
-.img-wrapper.thirds {
+.img-wrapper.border {
+    
+    border: 10px solid $off-white;
+    width: 95%;
+    left: 2.5%;
+
+    img {
+        
+    }
+
+    img.lazy {
+        
+    }
+}
+
+.thirds-wrapper {
     display: inline-block;
     float: left;
     width: 33.33333%;
@@ -492,15 +507,6 @@ img.lazy {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
-
-    img {
-        width: 95%;
-        left: 2.5%;
-    }
-
-    img.lazy {
-        border: 10px solid $off-white;
-    }
 }
 
 .img-wrapper img {
