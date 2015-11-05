@@ -157,7 +157,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                 <div>
                     <div class="img-wrapper">
                         <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'1200'%20height%3D'500'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
-                        <img class="lazy" data-lazy="{{ variant.image_path }}" alt="{{ frame.title }} {{ variant.title }}"/>
+                        <img class="lazy" data-lazy="{{ variant.image_path }}"/>
                     </div>
                     <h2>{{ frame.title | upcase}}</h2>
                     <h4>{{ variant.title | upcase}} | {{ variant.lens | upcase}}</h4>
@@ -171,7 +171,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                 <div>
                     <div class="img-wrapper">
                         <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'900'%20height%3D'675'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
-                        <img class="lazy" data-lazy="{{ variant.thumbnail_path }}" alt="{{ frame.title }} {{ variant.title }}"/>
+                        <img class="lazy" data-lazy="{{ variant.thumbnail_path }}"/>
                     </div>
                 </div>
                 {% endfor %}
@@ -222,7 +222,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                     <a target="_blank" href="{{ lookbook.pdf_path }}">
                         <div class="img-wrapper">
                             <img class="lazy-placeholder" src="data:image/svg+xml;charset=utf-8,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'500'%20height%3D'500'><rect%20width%3D'100%25'%20height%3D'100%25'%20fill%3D'transparent'%2F><%2Fsvg>"/>
-                            <img class="lazy" data-lazy="{{ img.img_path }}" alt="{{ lookbook.title }}" />
+                            <img class="lazy" data-lazy="{{ img.img_path }}"/>
                         </div>
                     </a>
                 </div>
