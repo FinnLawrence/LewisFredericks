@@ -146,6 +146,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     <div class="nav-padding off-white"></div>
     <div class="section-separator off-white"><div class="section-border"><h1 class="editable">FRAMES</h1></div></div>
     {% else %}
+    <div class="nav-padding"></div>
     <div class="section-separator off-white"><div class="section-border"></div></div>
     {% endif %}
     <div id="{{ frame.title | downcase | replace: ' ', '-' | replace: '.', ''}}" class="nav-padding"></div>
@@ -183,8 +184,8 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
 
 <!-- TITANIUM -->
 <div id="titanium" class="nav-padding"></div>
-<!--<div class="nav-padding off-white"></div>
-<div class="section-separator off-white"><div class="section-border"><h1 class="editable">TITANIUM</h1></div></div> -->
+<div class="nav-padding off-white"></div>
+<div class="section-separator off-white"><div class="section-border"><h1 class="editable">TITANIUM</h1></div></div>
 <div class="homepage-carousel">
     <div class="slick-wrapper">
         <div class="slick" id="titanium-carousel" data-slick='{"fade": true, "dots": true, "lazyLoad": "ondemand", "autoplay": true, "autoplaySpeed": 7000}'>
@@ -286,6 +287,33 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     {% endfor %}
 </div>
 
+<!-- BESPOKE -->
+<div id="bespoke" class="nav-padding"></div>
+<div class="nav-padding off-white"></div>
+<div class="section-separator off-white"><div class="section-border"><h1 class="editable">BESPOKE</h1></div></div>
+<div class="homepage-carousel">
+    <div class="slick-wrapper">
+        <div class="slick" id="bespoke-carousel" data-slick='{"fade": true, "dots": true, "lazyLoad": "ondemand", "autoplay": true, "autoplaySpeed": 7000}'>
+            <div class="titanium-slide">
+                <div id="titanium-slide-4" class="img"></div>
+            </div>
+            <div class="titanium-slide">
+                <div id="titanium-slide-5" class="img"></div>
+            </div>
+            <div class="titanium-slide">
+                <div id="titanium-slide-6" class="img"></div>
+            </div>
+        </div>
+        <div class="homepage-buttons">
+            <div class="button-wrapper">
+                <!--<a target="_blank" href="/pdf/Lewis%20Fredericks%20-%20Process.pdf" class="btn btn-default">SEE THE PROCESS</a>
+-->
+                <a href="#contact" id="btn-bespoke-enquire" onclick="ga('send', 'event', 'Button', 'Click', 'Enquire-Bespoke');" class="btn btn-primary">ENQUIRE</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- CONTACT -->
 <div id="contact" class="nav-padding"></div>
 <div class="nav-padding off-white"></div>
@@ -296,15 +324,15 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
     <div class="tabbedpanel" role="tabpanel">
 
         <!-- Nav tabs -->
-        <ul class="tab-list col-md-3" role="tablist">
+        <ul id="contact-tabs" class="tab-list col-md-3" role="tablist">
             <li role="presentation" class="active">
-                <a class="btn-tabpanel" href="#sales" aria-controls="sales" role="tab" data-toggle="tab">SALES &amp; PRODUCT</a>
+                <a class="btn-tabpanel" href="#sales-contact" aria-controls="sales" role="tab" data-toggle="tab">SALES &amp; PRODUCT</a>
             </li>
             <li role="presentation">
-                <a class="btn-tabpanel" href="#press" aria-controls="press" role="tab" data-toggle="tab">PRESS</a>
+                <a class="btn-tabpanel" href="#press-contact" aria-controls="press" role="tab" data-toggle="tab">PRESS</a>
             </li>
             <li role="presentation" class="last">
-                <a class="btn-tabpanel" href="#bespoke" aria-controls="bespoke" role="tab" data-toggle="tab">BESPOKE</a>
+                <a class="btn-tabpanel" href="#bespoke-contact" aria-controls="bespoke" role="tab" data-toggle="tab">BESPOKE</a>
             </li>    
         </ul>
 
@@ -312,7 +340,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
 
         <!-- Tab panes -->
         <div class="tab-content col-md-9">
-            <div role="tabpanel" class="tab-pane active" id="sales">
+            <div role="tabpanel" class="tab-pane active" id="sales-contact">
                 <div class="form-wrapper">
                     <form method="post" action="/success" id="sales-contact-form">
                         <div class="form-header">
@@ -357,7 +385,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                     </form>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="press">
+            <div role="tabpanel" class="tab-pane" id="press-contact">
                 <div class="form-wrapper">
                     <form method="post" action="/success" id="press-contact-form">
                         <div class="form-header">
@@ -402,7 +430,7 @@ description: "Lewis Fredericks Eyewear offers time-honoured silhouettes fashione
                     </form>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="bespoke">
+            <div role="tabpanel" class="tab-pane" id="bespoke-contact">
                 <div class="form-wrapper">
                     <form method="post" action="/success" id="bespoke-contact-form">
                         <div class="form-header">

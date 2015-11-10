@@ -34,6 +34,11 @@ $(document).ready(function() {
         }
         $('.stockist-grid').isotope({filter: filterString});
     });
+    
+    // BESPOKE BUTTON
+    $('#btn-bespoke-enquire').click(function() {
+        $('#contact-tabs a[href="#bespoke-contact"]').tab('show');
+    });
 
     // MODAL STOCKIST BUTTON
     $('.btn-stockists').click(function(){

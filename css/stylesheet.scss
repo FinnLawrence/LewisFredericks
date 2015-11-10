@@ -394,11 +394,23 @@ h4 {
     background-position: bottom;
 }
 
+#titanium-slide-4 {
+    background-image: url(/img/bespoke-carousel-1.jpg);
+}
+
+#titanium-slide-5 {
+    background-image: url(/img/bespoke-carousel-2.jpg);
+}
+
+#titanium-slide-6 {
+    background-image: url(/img/bespoke-carousel-3.jpg);
+}
+
 .titanium-slide {
-    height: -moz-calc(100vh - 52px);
-    height: -webkit-calc(100vh - 52px);
-    height: -o-calc(100vh - 52px);
-    height: calc(100vh - 52px);
+    height: -moz-calc(100vh - 154px);
+    height: -webkit-calc(100vh - 154px);
+    height: -o-calc(100vh - 154px);
+    height: calc(100vh - 154px);
     padding: 2.5vw;
 
     .img {
@@ -425,7 +437,7 @@ h4 {
 
 .homepage-buttons {
     position: absolute;
-    top: 75vh;
+    top: 65vh;
     width: 100%;
     z-index: 10;
 }
