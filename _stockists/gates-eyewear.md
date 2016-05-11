@@ -1,10 +1,12 @@
 ---
 title: Gates Eyewear
-web-address: 'http://www.thisisfabric.com'
-phone: +64 9 366 4528
-address: 5 High St
-suburb: Downtown
+web-address: 'http://gateseyewear.co.nz/'
+phone: +64 9 524 4962
+address: 17a Remuera Road
+suburb: Newmarket
 city: Auckland
 state:
 country: New Zealand
 ---
+
+
