@@ -1,10 +1,12 @@
 ---
 title: Eyes on Ardmore
-web-address: 'http://www.thisisfabric.com'
-phone: +64 9 366 4528
-address: 5 High St
-suburb: Downtown
-city: Auckland
+web-address: www.eyesonardmore.co.nz
+phone: 03-443 5103
+address: 80 Ardmore St
+suburb:
+city: Wanaka
 state:
 country: New Zealand
 ---
+
+
