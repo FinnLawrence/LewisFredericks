@@ -1,10 +1,12 @@
 ---
-title: Grace Lang
-web-address: 'http://www.thisisfabric.com'
-phone: +64 9 366 4528
-address: 5 High St
-suburb: Downtown
+title: Grace Lang Optometry
+web-address: www.gracelang.co.nz/
+phone: 09-376 2474
+address: 282 Ponsonby Rd
+suburb: Ponsonby
 city: Auckland
 state:
 country: New Zealand
 ---
+
+
